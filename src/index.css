@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Theme */
+* {
+  transition: background-color 300ms ease-in-out,
+    border-color 300ms ease-in-out,
+    color 300ms ease-in-out;
+}
+
+:root {
+  --bg-primary: 255 255 255;
+  --text-primary: 0 0 0;
+}
+
+/* Dark Theme */
+.dark {
+  --bg-primary: 15 15 15;
+  --text-primary: 245 245 245;
+}
+
+/* Utilities */
+.bg-primary {
+  background-color: rgb(var(--bg-primary));
+}
+
+.text-primary {
+  color: rgb(var(--text-primary));
+}
