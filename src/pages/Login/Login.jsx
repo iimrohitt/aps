@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
 import { FaApple, FaGoogle } from "react-icons/fa";
 import { SiMeta } from "react-icons/si";
 
 const Login = () => {
     const navigate = useNavigate();
-
+    const [showPassword, setShowPassword] = useState(false);
     return (
         <div className="relative min-h-screen flex items-center justify-center">
 
@@ -146,17 +147,29 @@ const Login = () => {
                                 required
                             />
 
-                            <input
-                                type="password"
-                                placeholder="Password (8+ characters)*"
-                                className="w-full px-4 py-3 rounded-lg
-                           border border-gray-300 dark:border-gray-600
-                           bg-white dark:bg-[#111111]
-                           text-black dark:text-white
-                           focus:ring-2 focus:ring-[#0CC8A8]
-                           outline-none transition"
-                                required
-                            />
+                            <div className="relative">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Password (8+ characters)*"
+                                    className="w-full px-4 py-3 pr-12 rounded-lg
+      border border-gray-300 dark:border-gray-600
+      bg-white dark:bg-[#111111]
+      text-black dark:text-white
+      focus:ring-2 focus:ring-[#0CC8A8]
+      outline-none transition"
+                                    required
+                                />
+
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2
+      text-gray-500 dark:text-gray-400
+      hover:text-[#0CC8A8] transition"
+                                >
+                                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                </button>
+                            </div>
 
                             <label className="flex items-start gap-1 text-sm 
                    text-gray-600 dark:text-gray-400 leading-relaxed cursor-pointer">
