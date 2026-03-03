@@ -29,7 +29,7 @@ export default function Sidebar() {
 
             <div className="">
                 {/* Logo */}
-                <div className="px-6 pt-4 pb-10 flex items-center gap-2">
+                <div className="px-6 pt-4 cursor-pointer pb-10 flex items-center gap-2">
                     <div className="w-5 h-5 flex justify-center items-center rounded-full bg-[#0CC8A8]">
                         <div className="w-2 h-2 rounded-full bg-white"></div>
                     </div>

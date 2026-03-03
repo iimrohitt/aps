@@ -24,7 +24,7 @@ const Login = () => {
                 {/* LEFT TEXT SECTION */}
                 <div className="text-white max-w-md mb-12 lg:mb-0">
 
-                    <div className="absolute top-2 -left-12 flex items-center gap-2 mb-10">
+                    <div className="absolute cursor-pointer top-2 -left-12 flex items-center gap-2 mb-10">
                         <div className="w-5 h-5 flex justify-center items-center  rounded-full bg-[#0CC8A8]" >
                             <div className="w-2 h-2 rounded-full bg-white"></div>
                         </div>
