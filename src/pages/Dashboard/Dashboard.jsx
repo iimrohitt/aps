@@ -1,6 +1,6 @@
 import OrgStatsBar from '../../components/dashboard/OrgStatsBar'
 import ScanTable from '../../components/dashboard/ScanTable'
-import StatsBar from '../../components/dashboard/Statsbar'
+import StatsBar from '../../components/dashboard/StatsBar'
 import AppLayout from '../../components/layout/AppLayout'
 
 const Dashboard = () => {
